@@ -1,14 +1,17 @@
 <template>
+   
     <div>
         <div class="content">
             <div class="left">
-                <img style="width:100%" src="https://upload.lixibox.com/system/pictures/files/000/073/261/large/1654829019.jpg?v=2" alt="">
-            </div>
+                <img style="width:100%" :src=this.data.img alt="">
+                
+          </div>
+        
             <div class="right">
                <div class="box1">
-                     <div> <label for="">Ten</label></div>
-                     <div style="font-size:30px; font-weight: bold;">description</div>
-                     <div style="font-size:25px">Price</div>
+                     <div> <label for="">{{this.data.title}}</label></div>
+                     <div style="font-size:25px; font-weight: bold;">{{this.data.description}}</div>
+                     <div style="font-size:20px">{{this.data.price}}</div>
                </div>
 
                <div class="box2">
@@ -34,16 +37,32 @@
             </div>
         </div>
     </div>
+
+    
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
     name: 'CartVue',
-
+    components:{
+       
+    },
+    computed:{
+        ...mapGetters(['data'])
+    },  
     data() {
         return {
             
         };
+    },
+    props:{
+        id:String,
+        img:String,
+        title:String,
+        description:String,
+        price:String
     },
 
  

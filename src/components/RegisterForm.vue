@@ -1,5 +1,6 @@
 <template>
-    <div class="form">
+   
+     <div class="form">
          <div class="login-form">
             <div class="left">
                 <div class="background" >
@@ -45,13 +46,17 @@
             </div>
         </div>
     </div>
+   
+   
 </template>
 
 <script>
 
 export default {
     name: 'RegisterForm',
-
+    components:{
+       
+    },
     data() {
         return {
             

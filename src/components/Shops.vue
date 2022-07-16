@@ -10,36 +10,7 @@
         </div>
     <div style="padding: 30px 50px 30px 50px">
         <div class="grid  grid-cols-2">
-            <!-- <div class="item">
-                <div>
-                    <img style="width:100%" src="https://upload.lixibox.com/system/store/information/images/000/000/001/original/1649237668.jpeg" alt="">
-                </div>
-              
-                <div class="information-form">
-                    <div>
-                         <label for="">Phạm Ngọc Thạch</label>
-                    </div>
-                   <div>
-                        <i class="fa-solid fa-location-dot"></i> 16 Phạm Ngọc Thạch, phường 6, quận 3, TP.HCM <a href="">Xem bản đồ</a>
-                   </div>
-                   <div>
-                      <i class="fa-solid fa-phone"></i> Hotline: 02838293052 
-                   </div>
-                   <div>
-                        <i class="fa-solid fa-envelope"></i> phamngocthach.store@lixibox.com
-                   </div>
-                   <div>
-                        <i class="fa-solid fa-calendar-days"></i> Thời gian hoạt động: Tất cả các ngày trong tuần
-                   </div>
-                   <div>
-                        <i class="fa-solid fa-clock"></i> Giờ mở cửa: 08:30 - 21:30
-                   </div>
-                    
-                </div>
-            </div>
-             <div class="item">02</div>
-             <div class="item">03</div>
-              <div class="item">04</div> -->
+           
            <ShopVue :shop="shop" v-for=" shop in shops" :key="shop.index"> </ShopVue>     
         </div>
     </div>
@@ -55,16 +26,39 @@ export default {
 
     data() {
         return {
-            
+            shops:[],
         };
+    },
+    created(){
+        this.shops=[
+            {
+        img:'https://upload.lixibox.com/system/store/information/images/000/000/001/original/1649237668.jpeg',
+        name:'Phạm Ngọc Thạch',
+        address: '16 Phạm Ngọc Thạch, phường 6, quận 3, TP.HCM',
+        hotline:'02838293052',
+        email:'phamngocthach.store@lixibox.com',
+        workingTime:'Tất cả các ngày trong tuần',
+        openingTime:'08:30 - 21:30'
+      },
+       {
+        img:'https://upload.lixibox.com/system/store/information/images/000/000/001/original/1649237668.jpeg',
+        name:'Phạm Ngọc Thạch',
+        address: '16 Phạm Ngọc Thạch, phường 6, quận 3, TP.HCM',
+        hotline:'02838293052',
+        email:'phamngocthach.store@lixibox.com',
+        workingTime:'Tất cả các ngày trong tuần',
+        openingTime:'08:30 - 21:30'
+      },
+
+        ]
     },
     components:{
         ShopVue
     },
 
-   props:{
-        shops:Array
-   },
+//    props:{
+//         shops:Array
+//    },
 
     methods: {
         
