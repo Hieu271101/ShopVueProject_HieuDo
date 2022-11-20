@@ -1,6 +1,9 @@
 <template>
        <LayoutVue>
     <div>
+        
+        
+
         <div class="style-bar">
             <div class="style">
                 <i class="fa-solid fa-bag-shopping fa-2xl"></i>1. Giỏ hàng
@@ -15,6 +18,12 @@
 
         <div class="main-container">
             <div class="title">Giỏ Hàng Của Bạn </div>
+            <ul>
+            <li v-for="post in posts" :key="post.name">
+      <p>{{post.name}}</p>
+      <p>{{post.description}}</p>
+    </li>
+        </ul>
             <!-- <div class="scroll-view">
                 <i class="fa-solid fa-basket-shopping fa-10x" style="margin-top:40px"></i>
                 <div style="width:100%;text-align: center;font-size: 25px;margin-top: 35px;" ><label for="">Giỏ hàng trống</label></div>
@@ -89,6 +98,7 @@
 
 <script>
 import LayoutVue from '../components/Layout.vue';
+
 export default {
     name: 'GoodInCart',
     components: {
@@ -98,9 +108,26 @@ export default {
 },
     data() {
         return {
-            count:1
+            count:1,
+            posts: []
         };
     },
+    async created() {
+    
+      
+    this.posts= await fetch('http://localhost:8080/products',{
+        method:'post',
+        headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    })
+  .then(response => response.json());
+ 
+  
+ 
+ 
+  },
 
    
     methods: {
