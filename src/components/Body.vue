@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <LayoutVue>
+  <div>
       <div class="row">
          <div class="col-sm-11" style="margin: auto; margin-bottom: 30px; ">
              <img style="border-radius: 8px;" src="../assets/1654675936.jpg" alt="">
@@ -14,12 +15,15 @@
       
 
     </div>
+
+    </LayoutVue>
+  
 </template>
 
 <script>
 import TopProducts from '../components/TopProducts.vue'
 import MainProductsVue from '../components/MainProducts.vue'
-
+import LayoutVue from '../components/Layout.vue';
 import VueprojectFilter from '../components/Filter.vue'
 export default {
     name: 'BodyVue',
@@ -29,7 +33,7 @@ export default {
     MainProductsVue,
     
     VueprojectFilter,
-   
+   LayoutVue
 },
 
     data() {
@@ -132,5 +136,5 @@ export default {
 </script>
 
 <style scoped>
-
+  
 </style>

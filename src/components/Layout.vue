@@ -32,5 +32,12 @@ export default {
 </script>
 
 <style  scoped>
-
+    MainNav{
+        position: fixed;
+        top: 0;
+    }
+    VueprojectFooter{
+        position: fixed;
+        bottom: 0;
+    }
 </style>

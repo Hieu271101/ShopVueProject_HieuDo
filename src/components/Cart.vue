@@ -1,5 +1,5 @@
 <template>
-   
+    <LayoutVue>
     <div>
         <div class="content">
             <div class="left">
@@ -37,17 +37,17 @@
             </div>
         </div>
     </div>
-
+</LayoutVue>
     
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-
+import LayoutVue from '../components/Layout.vue';
 export default {
     name: 'CartVue',
     components:{
-       
+        LayoutVue
     },
     computed:{
         ...mapGetters(['data'])

@@ -7,7 +7,7 @@
                   <p class="card-text">{{product.description}}</p>
                   <p>{{product.price}}</p>
                  <!-- <a href="."  type="button" class="btn btn-primary" @click="directToCart(product.id)">Đi đến giỏ hàng</a> -->
-                    <button class="btn btn-primary" type="button" @click="directToCart">Đi đến giỏ hàng</button>    
+                    <button class="btn btn-primary" type="button" @click="directToCart">Thêm giỏ hàng</button>    
                    
                  <!-- <button type="button" @click="directToCart">đi đến cart</button> -->
               </div>

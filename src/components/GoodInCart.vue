@@ -1,4 +1,5 @@
 <template>
+       <LayoutVue>
     <div>
         <div class="style-bar">
             <div class="style">
@@ -83,12 +84,18 @@
             </div>
         </div>
     </div>
+</LayoutVue>
 </template>
 
 <script>
+import LayoutVue from '../components/Layout.vue';
 export default {
     name: 'GoodInCart',
-
+    components: {
+  
+ 
+ LayoutVue
+},
     data() {
         return {
             count:1

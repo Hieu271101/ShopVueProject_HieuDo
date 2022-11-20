@@ -1,9 +1,10 @@
 <template>
   <div>
-    <LayoutVue>
-         <!-- <router-view name="home" />  -->
+    <router-view/>
+    <!-- <LayoutVue>
+        
          <router-view/>
-    </LayoutVue>
+    </LayoutVue> -->
         
    
   </div>
@@ -28,11 +29,11 @@
 </template>
 
 <script>
-import LayoutVue from './components/Layout.vue'
+// import LayoutVue from './components/Layout.vue'
 export default {
   name: 'App',
   components: {
-    LayoutVue
+    // LayoutVue
 },
   data() {
     return {

@@ -8,6 +8,8 @@ import OrderCheckVue from "./components/OrderCheck.vue";
 import ShopsVue from "./components/Shops.vue";
 import BodyVue from "./components/Body.vue";
 import GoodInCartVue from "./components/GoodInCart.vue";
+import MainManager from "./components/manager/MainManager.vue";
+
 const routers=[
     {
         path:'/',
@@ -43,13 +45,19 @@ const routers=[
         path:'/goodsincart',
         name:'goodsincart',
         component:GoodInCartVue
-    }
-    
+    },
+    {
+        path:'/manager',
+        name:'manager',
+        component:MainManager
+    },
+   
 
 ]
 
 const router=createRouter({
     history:createWebHistory(),
+    
     routes:routers
 })
 

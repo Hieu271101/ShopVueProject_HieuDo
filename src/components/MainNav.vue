@@ -42,9 +42,9 @@
                     <li class="dropdown"><a href="" > 
                          SHOP BEAUTY   </a>
                         <div class="dropdown-content">
-                            <a href="">
-                                <label for="">Mua theo box</label>
-                            </a>
+                          
+                                <label for=""><a href="">Mua theo box</a> </label>
+                           
                             <div >
                                  <a href="">Box mới nhất</a>
                                 <a href="">  Box bán chạy nhất</a>
@@ -55,6 +55,10 @@
                                 <a href="">  Box Chăm Sóc Răng Miệng</a>
                                 <a href="">  Box Chăm Sóc Sức Khỏe</a>
                             </div>
+
+                               <label for=""><a href="">Mua theo box</a> </label>
+                           
+                          
                           
                                
                       </div>
@@ -95,12 +99,13 @@ export default {
 
 <style  scoped>
     .dropdown{
-       
         position: relative;
         display: inline-block;
+      
     }
     .dropdown-content{
-         width: 500px;
+        padding: 10px;
+         width: 100%;
         line-height: 40px;
         display: none;
         position: absolute;
